@@ -1,0 +1,26 @@
+body {
+  background: linear-gradient(rgba(48, 54, 107, 0.4), rgba(226, 160, 85, 0.3)),
+    url(../images/fondo.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  font-family: $font-main;
+  padding: 5px;
+
+  @include tablet {
+    max-width: 768px;
+    padding: 10px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+}
