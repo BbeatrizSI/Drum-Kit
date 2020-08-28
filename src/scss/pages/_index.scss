@@ -1,26 +1,20 @@
 body {
-  background: linear-gradient(rgba(48, 54, 107, 0.4), rgba(226, 160, 85, 0.3)),
-    url(../images/fondo.jpg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .page {
+  background-image: url(../images/fondo.jpg);
+  background-position: center;
+  background-repeat: x-repeat;
+  background-size: cover;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: space-between;
   font-family: $font-main;
   padding: 5px;
-
-  @include tablet {
-    max-width: 768px;
-    padding: 10px;
-  }
-  @include desktop {
-    max-width: 1200px;
-  }
 }
