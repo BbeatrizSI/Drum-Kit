@@ -1,5 +1,18 @@
 'use strict';
 
+const keyForClick = document.querySelectorAll('.key');
+for (const key of keyForClick) {
+  key.addEventListener('click', function (e) {
+    const keyClicked = e.path[0].dataset.key;
+    const audio = document.querySelector(`audio[data-key="${keyClicked}"]`);
+
+    if (!audio) return; // stop the function from running all together.
+    audio.currentTime = 0; // rewind to the start
+    audio.play();
+    key.classList.add('playing');
+  });
+}
+
 window.addEventListener('keydown', function (e) {
   const audio = document.querySelector(`audio[data-key="${e.code}"]`);
   const key = document.querySelector(`.key[data-key="${e.code}"]`);
